@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html land = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="vieport" content="width = device-width, initial-scale=1.0">
+        <title>Cindy's Book Gallery | CSS & JavaScript</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel = "stylesheet" href="styles.css">
+    </head>
+    <body>
+      <header>
+        <h1>Cindy's Book Gallery</h1>
+        <p class="Subtitle">Explore Some Of My Favourite Books with Animations</p>
+      </header>
+
+
+      <nav>
+        <button class="btn" onclick="startAllAnimations ()"><i class="fas fa-play"></i>Start Book Animations</button>
+        <button class="btn" onclick="stopAllAnimations ()"><i class="fas fa-stop">Stop Book Animations</i></button>
+        <button class="btn" onclick="showModal ()"><i class="fas fa-info-circle">Info</i></button>
+      </nav>
+
+      <div class="book-gallery">
+      <div class="book-card fade-in">
+      <div class="book-cover pulse" id="book1">
+        <i class="fas fa book"></i>
+      </div>
+
+      <h2>Loved By You</h2>
+      <p class="author">Alexandrea LeChelle</p>
+      <p class="description">A story of wealth and love</p>
+                <button class="btn" onclick="toggleAnimation('book1', 'pulse')"><i class="fas fa-sync"></i> Toggle Pulse</button>
+      </div>
+        <div class="book-card fade-in" style="animation-delay: 0.2s;">
+                <div class="book-cover spin" id="book2">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h2>Sweet Heat</h2>
+                <p class="author">Bolu Babalola</p>
+                <p class="description">A powerful story of second chances and moral growth.</p>
+                <button class="btn" onclick="toggleAnimation('book2', 'spin')"><i class="fas fa-sync"></i> Toggle Spin</button>
+            </div>
+        
+        <div class="book-card fade-in" style="animation-delay: 0.4s;">
+                <div class="book-cover bounce" id="book3">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h2>The Build Up</h2>
+                <p class="author">Tati Richardson</p>
+                <p class="description">A Story Of Love Comedy And Enjoyment</p>
+                <button class="btn" onclick="toggleAnimation('book3', 'bounce')"><i class="fas fa-sync"></i> Toggle Bounce</button>
+            </div>
+        
+        <div class="book-card fade-in" style="animation-delay: 0.6s;">
+                <div class="book-cover book-flip" id="book4">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h2>Pride and Prejudice</h2>
+                <p class="author">Jane Austen</p>
+                <p class="description">A classic tale of love, reputation, and personal growth.</p>
+                <button class="btn" onclick="toggleAnimation('book4', 'book-flip')"><i class="fas fa-sync"></i> Toggle Flip</button>
+            </div>
+        </div>
+
+         <div class="book-card">
+            <h2>Animation Controls</h2>
+            <p>Use these buttons to control the book animations programmatically with JavaScript.</p>
+            
+            <div class="control-panel">
+                <button class="btn" onclick="startAllAnimations()"><i class="fas fa-play"></i> Start All</button>
+                <button class="btn" onclick="stopAllAnimations()"><i class="fas fa-stop"></i> Stop All</button>
+                <button class="btn" onclick="randomizeAnimations()"><i class="fas fa-random"></i> Randomize</button>
+                <button class="btn" onclick="calculateBookStats()"><i class="fas fa-calculator"></i> Calculate Stats</button>
+            </div>
+        
+        <div style="margin-top: 20px;">
+                <p>Animation Status: <span id="status">All animations are running</span></p>
+            </div>
+        </div>
+        
+        <div class="book-card slide-in">
+            <h2>Book Functions</h2>
+            <p>This section demonstrates JavaScript functions with parameters and return values.</p>
+            
+            <div style="margin-top: 15px;">
+                <button class="btn" onclick="calculateReadingTime()"><i class="fas fa-clock"></i> Reading Time</button>
+                <button class="btn" onclick="updateBookTitle()"><i class="fas fa-edit"></i> Update Title</button>
+                <button class="btn" onclick="changeTheme()"><i class="fas fa-palette"></i> Change Theme</button>
+            </div>
+
+        <div style="margin-top: 15px;">
+                <p id="output">Results will be shown here.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="hideModal()">&times;</button>
+            <h2>About Book Gallery</h2>
+            <p>This interactive book gallery demonstrates the combination of CSS animations and JavaScript functions.</p>
+            <div class="book-details">
+                <p>Features include:</p>
+                <ul style="margin-top: 10px; margin-left: 20px;">
+                    <li>CSS transitions and animations for dynamic effects</li>
+                    <li>JavaScript functions with parameters and return values</li>
+                    <li>Interactive controls to manipulate animations</li>
+                    <li>Modal window with smooth transitions</li>
+                </ul>
+            </div>
+            <button class="btn" style="margin-top: 20px;" onclick="hideModal()">Close</button>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Created as a demonstration of CSS animations and JavaScript functions | Cindy's Book Gallery</p>
+    </footer>
+
+    </body>
+
+    <script src="script.js"></script>
+</html>
